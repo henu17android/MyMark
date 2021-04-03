@@ -2,6 +2,7 @@ package com.example.mymark.watermark.model;
 
 import android.graphics.Bitmap;
 
+import com.example.mymark.watermark.style.CaptionBg;
 import com.example.mymark.watermark.style.CaptionFg;
 
 public class WatermarkItem {
@@ -96,11 +97,5 @@ public class WatermarkItem {
 
     public void setIcon(Bitmap icon) {
         this.icon = icon;
-    }
-
-
-    @Override
-    public int compareTo(WatermarkItem o) {
-        return Long.compare(this.getId(), o.getId());
     }
 }
