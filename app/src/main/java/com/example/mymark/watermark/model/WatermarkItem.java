@@ -1,11 +1,14 @@
 package com.example.mymark.watermark.model;
 
 import android.graphics.Bitmap;
+import android.os.Build;
 
 import com.example.mymark.watermark.style.CaptionBg;
 import com.example.mymark.watermark.style.CaptionFg;
 
-public class WatermarkItem {
+import androidx.annotation.RequiresApi;
+
+public class WatermarkItem implements Comparable<WatermarkItem>{
     private String version;
     private long id; // string.valueof(id) as folder name
     private String name;// waterMark Id
@@ -97,5 +100,11 @@ public class WatermarkItem {
 
     public void setIcon(Bitmap icon) {
         this.icon = icon;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @Override
+    public int compareTo(WatermarkItem o) {
+        return Long.compare(this.getId(), o.getId());
     }
 }

@@ -34,5 +34,4 @@
         app:layout_constraintStart_toStartOf="@+id/button_single"
         app:layout_constraintTop_toBottomOf="@+id/button_single" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WatermarkActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/colorAccent"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choose_img"
+        android:layout_marginTop="36dp"
+        android:text="选择图片"
+        app:layout_constraintTop_toBottomOf="@id/image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+<!--    <com.example.mymark.watermark.view.WatermarkView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/watermark"-->
+<!--        app:layout_constraintStart_toStartOf="@id/image"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/image"/>-->
+
+<!--    <com.example.mymark.watermark.view.WatermarkView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/watermark_for_drag"-->
+<!--        app:layout_constraintStart_toStartOf="@id/image"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/image"/>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="原水印"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/watermark"
+        app:layout_constraintStart_toStartOf="@id/image_view"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/watermark_for_drag"
+        android:text="拖拽水印"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/image_view"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view"/>
+
+    <include
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_mark_layout"
+        layout="@layout/layout_add_mark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
